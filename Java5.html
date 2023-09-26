@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task5</title>
+    <style>
+      .text-warning {
+        color: red;
+      }
+    </style>
+    <script>
+      function nameInfo() {
+        name = document.getElementById("name").value
+        if (name.length === 0) {
+          document.getElementById("name").style.border = `3px solid red`
+          document.getElementById(
+            "name-msg"
+          ).innerHTML = `This field is required`
+          return false
+        } else {
+          document.getElementById("name").style.border = ``
+          document.getElementById("name-msg").innerHTML = ``
+          return true
+        }
+      }
+      function emailInfo() {
+        email = document.getElementById("email").value
+        if (email.length === 0) {
+          document.getElementById("email").style.border = `3px solid red`
+          document.getElementById(
+            "email-msg"
+          ).innerHTML = `A valid email address is required`
+          return false
+        } else {
+          document.getElementById("email").style.border = ``
+          document.getElementById("email-msg").innerHTML = ``
+          return true
+        }
+      }
+      function websiteInfo() {
+        website = document.getElementById("website").value
+        if (website.length === 0) {
+          document.getElementById("website").style.border = `3px solid red`
+          document.getElementById(
+            "website-msg"
+          ).innerHTML = `A valid url is required`
+          return false
+        } else {
+          document.getElementById("website").style.border = ``
+          document.getElementById("website-msg").innerHTML = ``
+          return true
+        }
+      }
+      function messageInfo() {
+        message = document.getElementById("message").value
+        if (message.length === 0) {
+          document.getElementById("message").style.border = `3px solid red`
+          document.getElementById(
+            "message-msg"
+          ).innerHTML = `This field is required`
+          return false
+        } else {
+          document.getElementById("message").style.border = ``
+          document.getElementById("message-msg").innerHTML = ``
+          return true
+        }
+      }
+      function onSubmit() {
+        val1 = nameInfo()
+        val2 = emailInfo()
+        val3 = websiteInfo()
+        val4 = messageInfo()
+        return val1 && val2 && val3 && val4
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return onSubmit()">
+      <table>
+        <tr>
+          <td>Name:</td>
+          <td>
+            <input type="text" id="name" onkeyup="nameInfo()" />
+          </td>
+          <td class="text-warning" id="name-msg"></td>
+        </tr>
+        <tr>
+          <td>Email:</td>
+          <td>
+            <input type="text" id="email" onkeyup="emailInfo()" />
+          </td>
+          <td class="text-warning" id="email-msg"></td>
+        </tr>
+        <tr>
+          <td>Website:</td>
+          <td>
+            <input type="text" id="website" onkeyup="websiteInfo()" />
+          </td>
+          <td class="text-warning" id="website-msg"></td>
+        </tr>
+        <tr>
+          <td>Message:</td>
+          <td>
+            <textarea id="message" onkeyup="messageInfo()"></textarea>
+          </td>
+          <td class="text-warning" id="message-msg"></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <button type="submit">Submit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

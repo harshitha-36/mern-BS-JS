@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS2</title>
+</head>
+<style>
+    p{
+        display: inline;
+    }
+</style>
+<body>
+    <p>Example string : </p>
+    <input type="text" name="" id="string" onchange="sort()">
+    <br>
+    <br>
+    <p id="answer">Expected Output : </p>
+
+</body>
+<script>
+    function sort(){
+        s = document.getElementById("string").value
+        res = s.split("").sort().join("")
+        document.getElementById("answer").innerHTML = `Expected Output : ${res}`
+    }
+   
+</script>
+</html>

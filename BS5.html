@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task5</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      .bg-light-grey {
+        background-color: rgb(228, 227, 227);
+      }
+      .bg-light-red {
+        background-color: rgb(249, 115, 115);
+      }
+    </style>
+    <script>
+      function firstName() {
+        fname = document.getElementById("fname").value
+        if (fname.length === 0) {
+          document.getElementById("firstname").classList.add("text-danger")
+          document.getElementById("fname-icon").classList.add("text-danger")
+          document.getElementById("fname").classList.add("is-invalid")
+          return false
+        } else {
+          document.getElementById("firstname").classList.remove("text-danger")
+          document.getElementById("fname-icon").classList.remove("text-danger")
+          document.getElementById("fname").classList.remove("is-invalid")
+          return true
+        }
+      }
+      function lastName() {
+        lname = document.getElementById("lname").value
+        if (lname.length === 0) {
+          document.getElementById("lastname").classList.add("text-danger")
+          document.getElementById("lname-icon").classList.add("text-danger")
+          document.getElementById("lname").classList.add("is-invalid")
+          return false
+        } else {
+          document.getElementById("lastname").classList.remove("text-danger")
+          document.getElementById("lname-icon").classList.remove("text-danger")
+          document.getElementById("lname").classList.remove("is-invalid")
+          return true
+        }
+      }
+      function eMail() {
+        email = document.getElementById("email").value
+        if (email.length === 0) {
+          document.getElementById("mail").classList.add("text-danger")
+          document.getElementById("email-icon").classList.add("text-danger")
+          document.getElementById("email").classList.add("is-invalid")
+          return false
+        } else {
+          document.getElementById("mail").classList.remove("text-danger")
+          document.getElementById("email-icon").classList.remove("text-danger")
+          document.getElementById("email").classList.remove("is-invalid")
+          return true
+        }
+      }
+      function phoneNumber() {
+        phone = document.getElementById("phone").value
+        if (phone.length === 0) {
+          document.getElementById("mobile").classList.add("text-danger")
+          document.getElementById("phone-icon").classList.add("text-danger")
+          document.getElementById("phone").classList.add("is-invalid")
+          return false
+        } else {
+          document.getElementById("mobile").classList.remove("text-danger")
+          document.getElementById("phone-icon").classList.remove("text-danger")
+          document.getElementById("phone").classList.remove("is-invalid")
+          return true
+        }
+      }
+      function addressInfo() {
+        addr = document.getElementById("address").value
+        if (addr.length === 0) {
+          document.getElementById("addr").classList.add("text-danger")
+          document.getElementById("address-icon").classList.add("text-danger")
+          document.getElementById("address").classList.add("is-invalid")
+          return false
+        } else {
+          document.getElementById("addr").classList.remove("text-danger")
+          document
+            .getElementById("address-icon")
+            .classList.remove("text-danger")
+          document.getElementById("address").classList.remove("is-invalid")
+          return true
+        }
+      }
+      function cityInfo() {
+        city = document.getElementById("city").value
+        if (city.length === 0) {
+          document.getElementById("mycity").classList.add("text-danger")
+          document.getElementById("city-icon").classList.add("text-danger")
+          document.getElementById("city").classList.add("is-invalid")
+          return false
+        } else {
+          document.getElementById("mycity").classList.remove("text-danger")
+          document.getElementById("city-icon").classList.remove("text-danger")
+          document.getElementById("city").classList.remove("is-invalid")
+          return true
+        }
+      }
+      function stateInfo() {
+        state = document.getElementById("state").value
+        if (state === "nil") {
+          document.getElementById("mystate").classList.add("text-danger")
+          document.getElementById("state-icon").classList.add("text-danger")
+          document.getElementById("state").classList.add("is-invalid")
+          return false
+        } else {
+          document.getElementById("mystate").classList.remove("text-danger")
+          document.getElementById("state-icon").classList.remove("text-danger")
+          document.getElementById("state").classList.remove("is-invalid")
+          return true
+        }
+      }
+      function hoistingInfo() {
+        if (
+          document.getElementById("hyes").checked ||
+          document.getElementById("hno").checked
+        ) {
+          document.getElementById("hoisting").classList.remove("text-danger")
+          document
+            .getElementById("hoisting-label-1")
+            .classList.remove("text-danger")
+          document
+            .getElementById("hoisting-label-2")
+            .classList.remove("text-danger")
+          document
+            .getElementById("hoisting-message")
+            .classList.remove("alert-danger")
+          document.getElementById("hoisting-message").innerHTML = ``
+          return true
+        } else {
+          document.getElementById("hoisting").classList.add("text-danger")
+          document
+            .getElementById("hoisting-label-1")
+            .classList.add("text-danger")
+          document
+            .getElementById("hoisting-label-2")
+            .classList.add("text-danger")
+          document
+            .getElementById("hoisting-message")
+            .classList.add("alert-danger")
+          document.getElementById(
+            "hoisting-message"
+          ).innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle text-danger mx-2" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+</svg>Please select an option`
+          return false
+        }
+      }
+      function projectInfo() {
+        project = document.getElementById("project").value
+        if (project.length === 0) {
+          document.getElementById("myproject").classList.add("text-danger")
+          document.getElementById("project-icon").classList.add("text-danger")
+          document.getElementById("project").classList.add("is-invalid")
+          return false
+        } else {
+          document.getElementById("myproject").classList.remove("text-danger")
+          document
+            .getElementById("project-icon")
+            .classList.remove("text-danger")
+          document.getElementById("project").classList.remove("is-invalid")
+          return true
+        }
+      }
+      function onSubmit() {
+        val1 = firstName()
+        val2 = lastName()
+        val3 = eMail()
+        val4 = phoneNumber()
+        val5 = addressInfo()
+        val6 = cityInfo()
+        val7 = stateInfo()
+        val8 = hoistingInfo()
+        val9 = projectInfo()
+        return (
+          val1 && val2 && val3 && val4 && val5 && val6 && val7 && val8 && val9
+        )
+      }
+    </script>
+  </head>
+  <body class="bg-light-grey">
+    <div class="p-5 mx-auto" style="max-width: 900px">
+      <form onsubmit="return onSubmit()">
+        <div class="row">
+          <div
+            class="col-12 col-md-6 text-end fw-bold py-4 px-3"
+            id="firstname"
+          >
+            First Name
+          </div>
+          <div class="col-12 col-md-6 p-3">
+            <div class="input-group">
+              <span class="input-group-text">
+                <svg
+                  id="fname-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-person-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                  />
+                </svg>
+              </span>
+              <input
+                type="text"
+                class="form-control"
+                id="fname"
+                placeholder="First Name"
+                onkeyup="firstName()"
+              />
+              <div class="invalid-feedback">Please supply your first name</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 text-end fw-bold py-4 px-3" id="lastname">
+            Last Name
+          </div>
+          <div class="col-12 col-md-6 p-3">
+            <div class="input-group">
+              <span class="input-group-text">
+                <svg
+                  id="lname-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-person-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                  />
+                </svg>
+              </span>
+              <input
+                type="text"
+                class="form-control"
+                id="lname"
+                placeholder="Last Name"
+                onkeyup="lastName()"
+              />
+              <div class="invalid-feedback">Please supply your last name</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 text-end fw-bold py-4 px-3" id="mail">
+            E-Mail
+          </div>
+          <div class="col-12 col-md-6 p-3">
+            <div class="input-group">
+              <span class="input-group-text">
+                <svg
+                  id="email-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-envelope-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
+                  />
+                </svg>
+              </span>
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                placeholder="E-Mail Address"
+                onkeyup="eMail()"
+              />
+              <div class="invalid-feedback">
+                Please supply your email address
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 text-end fw-bold py-4 px-3" id="mobile">
+            Phone #
+          </div>
+          <div class="col-12 col-md-6 p-3">
+            <div class="input-group">
+              <span class="input-group-text">
+                <svg
+                  id="phone-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-telephone-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                  />
+                </svg>
+              </span>
+              <input
+                type="text"
+                class="form-control"
+                id="phone"
+                placeholder="(845)555-1212"
+                onkeyup="phoneNumber()"
+              />
+              <div class="invalid-feedback">
+                Please supply your phone number
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 text-end fw-bold py-4 px-3" id="addr">
+            Address
+          </div>
+          <div class="col-12 col-md-6 p-3">
+            <div class="input-group">
+              <span class="input-group-text">
+                <svg
+                  id="address-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-house-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"
+                  />
+                  <path
+                    d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"
+                  />
+                </svg>
+              </span>
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                placeholder="Address"
+                onkeyup="addressInfo()"
+              />
+              <div class="invalid-feedback">
+                Please supply your street address
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 text-end fw-bold py-4 px-3" id="mycity">
+            City
+          </div>
+          <div class="col-12 col-md-6 p-3">
+            <div class="input-group">
+              <span class="input-group-text">
+                <svg
+                  id="city-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-house-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"
+                  />
+                  <path
+                    d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"
+                  />
+                </svg>
+              </span>
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                placeholder="City"
+                onkeyup="cityInfo()"
+              />
+              <div class="invalid-feedback">Please supply your city</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 text-end fw-bold py-4 px-3" id="mystate">
+            State
+          </div>
+          <div class="col-12 col-md-6 p-3">
+            <div class="input-group">
+              <span class="input-group-text">
+                <svg
+                  id="state-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-list-task"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M2 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H2zM3 3H2v1h1V3z"
+                  />
+                  <path
+                    d="M5 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM5.5 7a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 4a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M1.5 7a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5V7zM2 7h1v1H2V7zm0 3.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5H2zm1 .5H2v1h1v-1z"
+                  />
+                </svg>
+              </span>
+              <select
+                class="form-select text-secondary"
+                id="state"
+                onchange="stateInfo()"
+              >
+                <option selected value="nil">Please select your state</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Delhi">Delhi</option>
+              </select>
+              <div class="invalid-feedback">Please supply your state</div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12 col-md-6 text-end fw-bold p-3" id="hoisting">
+            Do you have hosting?
+          </div>
+          <div class="col-12 col-md-6 px-5 py-3 form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              name="hosting"
+              value="yes"
+              id="hyes"
+              onclick="hoistingInfo()"
+            />
+            <label class="form-check-label" for="hyes" id="hoisting-label-1"
+              >Yes</label
+            >
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-6 text-end fw-bold p-3">
+            <div class="alert text-center" id="hoisting-message"></div>
+          </div>
+          <div class="col-12 col-md-6 px-5 py-3 form-check">
+            <input
+              type="radio"
+              class="form-check-input"
+              name="hosting"
+              value="no"
+              id="hno"
+              onclick="hoistingInfo()"
+            />
+            <label class="form-check-label" for="hno" id="hoisting-label-2"
+              >No</label
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="col-12 col-md-6 text-end fw-bold py-4 px-3"
+            id="myproject"
+          >
+            Project Description
+          </div>
+          <div class="col-12 col-md-6 p-3">
+            <div class="input-group">
+              <span class="input-group-text">
+                <svg
+                  id="project-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-pencil-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"
+                  />
+                </svg>
+              </span>
+              <textarea
+                type="text"
+                class="form-control"
+                id="project"
+                placeholder="Project Description"
+                onkeyup="projectInfo()"
+              ></textarea>
+              <div class="invalid-feedback">
+                Please supply your project description
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12 col-md-6 p-3"></div>
+          <div class="col-12 col-md-6 p-3">
+            <input type="submit" class="btn btn-warning" value="Send" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

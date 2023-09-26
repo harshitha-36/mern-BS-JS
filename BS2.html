@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <style>
+      .texr-dark-blue {
+        color: rgb(2, 2, 35);
+      }
+      .bg-dark-blue {
+        background-color: rgb(2, 2, 35);
+      }
+      .circle {
+        border-radius: 50% !important;
+        border: dotted 2px white !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-warning">
+      <div class="navbar container">
+        <p
+          class="h1 col-md-2 col-12 m-2 p-2 text-center text-md-start"
+          style="font-weight: 700"
+        >
+          Buliderz
+        </p>
+        <div class="row justify-content-end col-12 col-md-10 p-3">
+          <div class="col-12 col-md-3 d-flex m-2">
+            <div class="p-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                class="bi bi-clock-history"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"
+                />
+                <path
+                  d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"
+                />
+                <path
+                  d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"
+                />
+              </svg>
+            </div>
+            <div class="d-flex flex-column ps-3">
+              <div class="h6">Opening Hour</div>
+              <div>Mon - Fri,8:00 - 9:00</div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 d-flex m-2">
+            <div class="p-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                class="bi bi-telephone"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                />
+              </svg>
+            </div>
+            <div class="d-flex flex-column ps-3">
+              <div class="h6">Call Us</div>
+              <div>+012 345 6789</div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 d-flex m-2">
+            <div class="p-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                fill="currentColor"
+                class="bi bi-envelope-at"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"
+                />
+                <path
+                  d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"
+                />
+              </svg>
+            </div>
+            <div class="d-flex flex-column ps-3">
+              <div class="h6">Email Us</div>
+              <div>info@example.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar bg-dark-blue navbar-expand-md p-2">
+          <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#demo"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              fill="currentColor"
+              class="bi bi-list text-light m-3"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+          <ul class="order-2 order-md-1 nav navbar-collapse collapse col-12 col-md-9" id="demo">
+            <li class="nav-item col-12 col-md-auto">
+              <a href="#" class="nav-link text-light p-4">HOME</a>
+            </li>
+            <li class="nav-item col-12 col-md-auto">
+              <a href="#" class="nav-link text-light p-4">ABOUT</a>
+            </li>
+            <li class="nav-item col-12 col-md-auto">
+              <a href="#" class="nav-link text-light p-4">SERVICE</a>
+            </li>
+            <li class="nav-item col-12 col-md-auto">
+              <a href="#" class="nav-link text-light p-4">TEAM</a>
+            </li>
+            <li class="nav-item col-12 col-md-auto">
+              <a href="#" class="nav-link text-light p-4">PROJECT</a>
+            </li>
+            <li class="nav-item col-12 col-md-auto">
+              <div class="btn-group">
+                <button
+                  class="btn dropdown-toggle text-light p-4"
+                  data-bs-toggle="dropdown"
+                >
+                  PAGES
+                </button>
+                <div class="dropdown-menu bg-dark-blue">
+                  <div class="dropdown-item text-warning">Item 1</div>
+                  <div class="dropdown-item text-warning">Item 2</div>
+                  <div class="dropdown-item text-warning">Item 3</div>
+                </div>
+              </div>
+            </li>
+            <li class="nav-item col-12 col-md-auto">
+              <a href="#" class="nav-link text-light p-4">CONTACT</a>
+            </li>
+          </ul>
+          <div
+            class="order-1 order-md-2 col-6 col-md-3 d-flex align-items-center justify-content-end"
+          >
+            <div class="border border-light text-light p-2 m-2 m-md-4">
+              <a href="#" class="nav-link">Get A Quote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="carouselExampleIndicators"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div
+            id="slideshow"
+            style="
+              background-color: rgb(75, 73, 73);
+              background-image: url(https://media.bizj.us/view/img/10232410/howtochoossearchitect*1024xx1697-956-0-0.jpg);
+              background-size: cover;
+              background-blend-mode: multiply;
+              height: 70vh;
+            "
+          >
+            <div
+              class="d-flex flex-column align-items-center justify-content-center"
+              style="height: 100%"
+            >
+              <div class="h3 text-light p-2">We Are Professional</div>
+              <div class="h1 text-light p-2">For Your Dream Project</div>
+              <div class="border border-light text-light p-2 m-3">
+                <a href="#" class="text-light" style="text-decoration: none"
+                  >Get A Quote</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            id="slideshow"
+            style="
+              background-color: rgb(75, 73, 73);
+              background-image: url(https://media.bizj.us/view/img/10232410/howtochoossearchitect*1024xx1697-956-0-0.jpg);
+              background-size: cover;
+              background-blend-mode: multiply;
+              height: 70vh;
+            "
+          >
+            <div
+              class="d-flex flex-column align-items-center justify-content-center"
+              style="height: 100%"
+            >
+              <div class="h3 text-light p-2">We Are Professional</div>
+              <div class="h1 text-light p-2">For Your Dream Project</div>
+              <div class="border border-light text-light p-2 m-3">
+                <a href="#" class="text-light" style="text-decoration: none"
+                  >Get A Quote</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            id="slideshow"
+            style="
+              background-color: rgb(75, 73, 73);
+              background-image: url(https://media.bizj.us/view/img/10232410/howtochoossearchitect*1024xx1697-956-0-0.jpg);
+              background-size: cover;
+              background-blend-mode: multiply;
+              height: 70vh;
+            "
+          >
+            <div
+              class="d-flex flex-column align-items-center justify-content-center"
+              style="height: 100%"
+            >
+              <div class="h3 text-light p-2">We Are Professional</div>
+              <div class="h1 text-light p-2">For Your Dream Project</div>
+              <div class="border border-light text-light p-2 m-3">
+                <a href="#" class="text-light" style="text-decoration: none"
+                  >Get A Quote</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-4 d-flex bg-dark-blue align-items-center">
+        <div class="m-5 p-3 border circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-person-gear text-warning"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm.256 7a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Zm3.63-4.54c.18-.613 1.048-.613 1.229 0l.043.148a.64.64 0 0 0 .921.382l.136-.074c.561-.306 1.175.308.87.869l-.075.136a.64.64 0 0 0 .382.92l.149.045c.612.18.612 1.048 0 1.229l-.15.043a.64.64 0 0 0-.38.921l.074.136c.305.561-.309 1.175-.87.87l-.136-.075a.64.64 0 0 0-.92.382l-.045.149c-.18.612-1.048.612-1.229 0l-.043-.15a.64.64 0 0 0-.921-.38l-.136.074c-.561.305-1.175-.309-.87-.87l.075-.136a.64.64 0 0 0-.382-.92l-.148-.045c-.613-.18-.613-1.048 0-1.229l.148-.043a.64.64 0 0 0 .382-.921l-.074-.136c-.306-.561.308-1.175.869-.87l.136.075a.64.64 0 0 0 .92-.382l.045-.148ZM14 12.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0Z"
+            />
+          </svg>
+        </div>
+        <div class="d-flex flex-column pe-5 py-5">
+          <div class="h4 text-warning">Quality Work</div>
+          <div class="text-warning">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            praesentium placeat nesciunt!
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 d-flex bg-warning align-items-center">
+        <div class="m-5 p-3 border circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-building-check texr-dark-blue"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm1.679-4.493-1.335 2.226a.75.75 0 0 1-1.174.144l-.774-.773a.5.5 0 0 1 .708-.708l.547.548 1.17-1.951a.5.5 0 1 1 .858.514Z"
+            />
+            <path
+              d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6.5a.5.5 0 0 1-1 0V1H3v14h3v-2.5a.5.5 0 0 1 .5-.5H8v4H3a1 1 0 0 1-1-1V1Z"
+            />
+            <path
+              d="M4.5 2a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm-6 3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Zm3 0a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z"
+            />
+          </svg>
+        </div>
+        <div class="d-flex flex-column pe-5 py-5">
+          <div class="h4 text-dark-blue">Expert Worker</div>
+          <div class="text-dark-blue">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            praesentium placeat nesciunt!
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 d-flex bg-dark-blue align-items-center">
+        <div class="m-5 p-3 border circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-telephone text-warning"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+            />
+          </svg>
+        </div>
+        <div class="d-flex flex-column pe-5 py-5">
+          <div class="h4 text-warning">24/7 Support</div>
+          <div class="text-warning">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
+            praesentium placeat nesciunt!
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

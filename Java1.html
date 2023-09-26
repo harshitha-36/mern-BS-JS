@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS1</title>
+</head>
+<style>
+    p{
+        display: inline;
+    }
+</style>
+<body>
+    <p>
+        Example x : 
+    </p>
+    <input type="number" name="" id="num" onchange="reverse()">
+    <br>
+    <br>
+    <p id = "answer">Expected Output: </p>
+</body>
+<script>
+    function reverse()
+    {
+        num1 = document.getElementById("num").value  
+        let temp1 = num1
+        let ans = 0
+        let rem = 0
+        while(temp1>0)
+        {
+            rem = temp1%10
+            ans = ans*10 + rem
+            temp1 = Math.floor(temp1 / 10)
+        }
+        document.getElementById("answer").innerHTML = `Expected Output: ${ans}`
+    }
+</script>
+</html>

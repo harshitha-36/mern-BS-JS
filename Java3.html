@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS3</title>
+</head>
+<style>
+    p{
+        display: inline;
+    }
+</style>
+<body>
+    <p>1st Number: </p>
+    <input type="number" name="" id="num1" >
+    <br>
+    <br>
+    <p>2nd Number: </p>
+    <input type="number" name="" id="num2">
+    <br>
+    <br>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Divide</button>
+    <br>
+    <br>
+    <p id="answer">No operation performed</p>
+</body>
+<script>
+    function multiply(){
+        let num1 = document.getElementById("num1").value
+        let num2 = document.getElementById("num2").value
+        let ans = num1*num2
+        document.getElementById("answer").innerHTML =`The Result Is: <br> ${ans}`
+    }
+
+    function divide(){
+        let num1 = document.getElementById("num1").value
+        let num2 = document.getElementById("num2").value
+        let ans = num1/num2
+        document.getElementById("answer").innerHTML =`The Result Is: <br>${ans}`
+    }
+</script>
+</html>
